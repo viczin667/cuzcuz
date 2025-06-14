@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuscuz Vendas - Dúvidas Frequentes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu-toggle" id="open-menu-btn"> 
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <aside class="sidebar side-menu" id="side-menu"> 
+        <div class="sidebar-header">
+            <h3>Catálogo Cuscuz Vendas</h3>
+            <button class="close-btn" id="close-menu-btn">&times;</button>
+        </div>
+        <ul class="sidebar-menu menu-list"> 
+            <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+            <li class="has-submenu">
+                <a href="produtos.html?category=freefire" class="submenu-toggle"> <i class="fas fa-fire"></i> Contas de Free Fire
+                    <i class="fas fa-chevron-down submenu-arrow"></i> </a>
+                <ul class="submenu">
+                    <li><a href="produtos.html?category=freefire&price=50"><i class="fas fa-dollar-sign"></i> Contas a partir de R$50</a></li>
+                    <li><a href="produtos.html?category=freefire&price=100"><i class="fas fa-dollar-sign"></i> Contas a partir de R$100</a></li>
+                    <li><a href="produtos.html?category=freefire&price=200"><i class="fas fa-dollar-sign"></i> Contas a partir de R$200</a></li>
+                    <li><a href="produtos.html?category=freefire&price=300"><i class="fas fa-dollar-sign"></i> Contas Elite (R$300+)</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="produtos.html?category=design" class="submenu-toggle">
+                    <i class="fas fa-paint-brush"></i> Produtos de Design
+                    <i class="fas fa-chevron-down submenu-arrow"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="produtos.html?category=design&type=posts"><i class="fas fa-palette"></i> Artes para Posts</a></li>
+                    <li><a href="produtos.html?category=design&type=videos"><i class="fas fa-magic"></i> Edições de Vídeo</a></li>
+                </ul>
+            </li>
+            <li><a href="produtos.html"><i class="fas fa-shopping-cart"></i> Todos os Produtos</a></li>
+
+            <li class="has-submenu">
+                <a href="#" class="submenu-toggle">
+                    <i class="fas fa-headset"></i> Suporte
+                    <i class="fas fa-chevron-down submenu-arrow"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="https://wa.me/5599984180477" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Contato</a></li>
+                    <li><a href="https://chat.whatsapp.com/JyXdm9xFfttEaGBsVBhuh6" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Grupo</a></li>
+                    <li><a href="https://instagram.com/cuzcuz_vendas" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="mailto:seuemail@example.com"><i class="fas fa-envelope"></i> E-mail</a></li>
+                </ul>
+            </li>
+            <li><a href="duvidas.html"><i class="fas fa-question-circle"></i> Dúvidas Frequentes</a></li>
+        </ul>
+    </aside>
+
+    <div id="menu-overlay" class="menu-overlay"></div>
+
+    <div class="site-content">
+        <div class="container">
+            <header>
+                <h1>Dúvidas Frequentes (FAQ)</h1>
+                <p>Encontre as respostas para as perguntas mais comuns aqui.</p>
+            </header>
+            
+            <main>
+                <section class="faq-section">
+                    <div class="faq-item">
+                        <h3 class="faq-question">1. Como é feito o processo de venda de contas de Free Fire?</h3>
+                        <div class="faq-answer">
+                            <p>Após escolher a conta desejada em nosso catálogo e efetuar o pagamento, entraremos em contato com você via WhatsApp (ou outro canal de sua preferência) para realizar a transferência da conta. Garantimos um processo seguro e rápido, com toda a assistência necessária para que você tenha acesso à sua nova conta.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">2. Quais são as formas de pagamento aceitas?</h3>
+                        <div class="faq-answer">
+                            <p>Aceitamos Pix, transferência bancária (verificar bancos disponíveis) e, em alguns casos, podemos negociar outras formas de pagamento. Para mais detalhes, por favor, entre em contato conosco através do WhatsApp.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">3. Os produtos de design são personalizados?</h3>
+                        <div class="faq-answer">
+                            <p>Sim, a maioria dos nossos produtos de design são criados sob medida para atender às suas necessidades! Após a compra, entraremos em contato para coletar todas as informações e referências necessárias para desenvolver a arte ou edição de vídeo perfeita para você.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">4. Quanto tempo leva para receber meu produto digital?</h3>
+                        <div class="faq-answer">
+                            <p>O tempo de entrega varia conforme o produto:</p>
+                            <ul>
+                                <li>**Contas de Free Fire:** Geralmente são transferidas em poucos minutos ou até 2 horas após a confirmação do pagamento.</li>
+                                <li>**Produtos de Design:** O prazo pode variar de 1 a 5 dias úteis, dependendo da complexidade e da sua aprovação do projeto. Informaremos um prazo estimado no momento da compra.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">5. Vocês oferecem suporte após a compra?</h3>
+                        <div class="faq-answer">
+                            <p>Com certeza! Nosso suporte é contínuo. Em caso de dúvidas sobre a conta de Free Fire ou qualquer questão relacionada aos produtos de design, você pode nos contatar a qualquer momento via WhatsApp ou Instagram. Estamos aqui para garantir sua satisfação!</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">6. É seguro comprar contas de Free Fire de vocês?</h3>
+                        <div class="faq-answer">
+                            <p>Sim, sua segurança é nossa prioridade. Temos mais de 2 anos de experiência no mercado e construímos uma sólida reputação baseada na confiança e transparência. Todas as contas são verificadas antes da venda, e oferecemos suporte completo durante e após a transação.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">7. Posso revender as contas ou produtos que compro de vocês?</h3>
+                        <div class="faq-answer">
+                            <p>Para contas de Free Fire, uma vez que a conta é sua, você tem total liberdade para usá-la ou revendê-la. Para produtos de design, você recebe os direitos de uso sobre a arte final. Em ambos os casos, não há restrições de nossa parte quanto à revenda ou uso após a compra.</p>
+                        </div>
+                    </div>
+
+                    </section>
+            </main>
+        </div>
+
+        <button class="back-to-top-btn" id="backToTopBtn" aria-label="Voltar ao topo">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <div id="toast-container"></div> <script src="script.js"></script>
+</body>
+</html>

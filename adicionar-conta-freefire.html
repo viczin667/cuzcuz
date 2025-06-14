@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Conta FF - Cuscuz Vendas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>Catálogo Cuscuz Vendas</h3>
+            <button class="close-btn" id="closeBtn">&times;</button>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+            <li class="has-submenu">
+                <a href="contas-freefire.html" class="submenu-toggle">
+                    <i class="fas fa-fire"></i> Contas de Free Fire
+                    <i class="fas fa-chevron-down submenu-arrow"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="contas-freefire.html?price=50"><i class="fas fa-dollar-sign"></i> Contas a partir de R$50</a></li>
+                    <li><a href="contas-freefire.html?price=100"><i class="fas fa-dollar-sign"></i> Contas a partir de R$100</a></li>
+                    <li><a href="contas-freefire.html?price=200"><i class="fas fa-dollar-sign"></i> Contas a partir de R$200</a></li>
+                    <li><a href="contas-freefire.html?price=300"><i class="fas fa-dollar-sign"></i> Contas Elite (R$300+)</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-toggle">
+                    <i class="fas fa-paint-brush"></i> Produtos de Design
+                    <i class="fas fa-chevron-down submenu-arrow"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="#"><i class="fas fa-palette"></i> Artes para Posts</a></li>
+                    <li><a href="#"><i class="fas fa-magic"></i> Edições de Vídeo</a></li>
+                </ul>
+            </li>
+            <li><a href="produtos.html"><i class="fas fa-shopping-cart"></i> Todos os Produtos</a></li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-toggle">
+                    <i class="fas fa-headset"></i> Suporte
+                    <i class="fas fa-chevron-down submenu-arrow"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="https://wa.me/5599984180477" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Contato</a></li>
+                    <li><a href="https://chat.whatsapp.com/JyXdm9xFfttEaGBsVBhuh6" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Grupo</a></li>
+                    <li><a href="https://instagram.com/cuzcuz_vendas" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://discord.gg/seuconvite" target="_blank"><i class="fab fa-discord"></i> Discord</a></li>
+                    <li><a href="mailto:seuemail@example.com"><i class="fas fa-envelope"></i> E-mail</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="site-content" id="siteContent">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Sobre a Nossa Loja</a></li>
+                    <li><a href="duvidas.html">Dúvidas</a></li>
+                </ul>
+            </nav>
+            <header>
+                <div class="center">
+                    <img src="./img/cuscuz.png" alt="Logo Cuscuz Vendas">
+                </div>
+                <h1>Cuscuz Vendas</h1>
+                <h2>Cadastrar Nova Conta de Free Fire</h2>
+            </header>
+            <main>
+                <section class="add-product-section">
+                    <h3>Detalhes da Conta de Free Fire</h3>
+                    <form id="addFreeFireAccountForm">
+                        <div class="form-group">
+                            <label for="accountName">Nome/Título da Conta:</label>
+                            <input type="text" id="accountName" name="accountName" placeholder="Ex: Conta Mestre com 50 Skins" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="accountDescription">Descrição Detalhada:</label>
+                            <textarea id="accountDescription" name="accountDescription" rows="6" placeholder="Ex: Nível 70, 50 skins, 10 passes de elite, 2 pets lendários, 5 armas evolutivas..." required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="accountPrice">Preço (R$):</label>
+                            <input type="number" id="accountPrice" name="accountPrice" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="accountImage">URL da Imagem da Conta:</label>
+                            <input type="url" id="accountImage" name="accountImage" placeholder="Ex: https://exemplo.com/screenshot_conta.png" required>
+                            <small>Cole o link direto da imagem aqui (hospede a imagem online antes). Use imagens que mostrem o valor da conta!</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="accountLevel">Nível da Conta:</label>
+                            <input type="number" id="accountLevel" name="accountLevel" min="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="accountSkins">Número de Skins:</label>
+                            <input type="number" id="accountSkins" name="accountSkins" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="accountRank">Rank Atual:</label>
+                            <select id="accountRank" name="accountRank">
+                                <option value="">Selecione um Rank</option>
+                                <option value="Bronze">Bronze</option>
+                                <option value="Prata">Prata</option>
+                                <option value="Ouro">Ouro</option>
+                                <option value="Platina">Platina</option>
+                                <option value="Diamante">Diamante</option>
+                                <option value="Mestre">Mestre</option>
+                                <option value="Desafiante">Desafiante</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="accountBinding">Vinculação da Conta:</label>
+                            <select id="accountBinding" name="accountBinding" required>
+                                <option value="">Selecione a Vinculação</option>
+                                <option value="Facebook">Facebook</option>
+                                <option value="Google">Google</option>
+                                <option value="VK">VK</option>
+                                <option value="Twitter">Twitter</option>
+                                <option value="Garena">Garena (ID)</option>
+                                <option value="Outro">Outro</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="submit-product-button">Cadastrar Conta de Free Fire</button>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Lógica do menu lateral e submenus para esta página (copiado do script.js ou refatorado)
+            const menuToggle = document.getElementById('menuToggle');
+            const sidebar = document.getElementById('sidebar');
+            const closeBtn = document.getElementById('closeBtn');
+            const overlay = document.getElementById('overlay');
+            const siteContent = document.getElementById('siteContent');
+
+            function openSidebar() {
+                if (sidebar) { sidebar.classList.add('active'); }
+                if (overlay) { overlay.classList.add('active'); }
+                if (siteContent) { siteContent.classList.add('shifted'); }
+                if (menuToggle) { menuToggle.classList.add('hidden'); }
+            }
+
+            function closeSidebar() {
+                if (sidebar) { sidebar.classList.remove('active'); }
+                if (overlay) { overlay.classList.remove('active'); }
+                if (siteContent) { siteContent.classList.remove('shifted'); }
+                if (menuToggle) { menuToggle.classList.remove('hidden'); }
+            }
+
+            if (menuToggle) { menuToggle.addEventListener('click', openSidebar); }
+            if (closeBtn) { closeBtn.addEventListener('click', closeSidebar); }
+            if (overlay) { overlay.addEventListener('click', closeSidebar); }
+
+            const submenuToggles = document.querySelectorAll('.sidebar-menu .has-submenu > .submenu-toggle');
+            submenuToggles.forEach(toggle => {
+                toggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const parentLi = this.parentElement;
+                    parentLi.classList.toggle('active');
+                });
+            });
+
+            // Lógica de adicionar conta de Free Fire
+            const addFreeFireAccountForm = document.getElementById('addFreeFireAccountForm');
+            if (addFreeFireAccountForm) {
+                addFreeFireAccountForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    const name = document.getElementById('accountName').value;
+                    const description = document.getElementById('accountDescription').value;
+                    const price = parseFloat(document.getElementById('accountPrice').value).toFixed(2);
+                    const image = document.getElementById('accountImage').value;
+                    const level = document.getElementById('accountLevel').value;
+                    const skins = document.getElementById('accountSkins').value;
+                    const rank = document.getElementById('accountRank').value;
+                    const binding = document.getElementById('accountBinding').value;
+
+                    if (!name || !description || isNaN(price) || !image || !binding) {
+                        alert('Por favor, preencha os campos obrigatórios (Nome, Descrição, Preço, Imagem e Vinculação).');
+                        return;
+                    }
+
+                    const newAccount = {
+                        id: Date.now(), // Um ID único baseado no timestamp
+                        name: name,
+                        description: description,
+                        price: `R$ ${price.replace('.', ',')}`, // Formata para BRL
+                        image: image,
+                        level: level || 'Não informado', // Adiciona os novos campos
+                        skins: skins || 'Não informado',
+                        rank: rank || 'Não informado',
+                        binding: binding
+                    };
+
+                    // Carrega as contas de Free Fire existentes, adiciona a nova e salva em uma NOVA CHAVE
+                    let freefireAccounts = JSON.parse(localStorage.getItem('freefireAccounts')) || [];
+                    freefireAccounts.push(newAccount);
+                    localStorage.setItem('freefireAccounts', JSON.stringify(freefireAccounts));
+
+                    alert('Conta de Free Fire cadastrada com sucesso! Agora você pode vê-la na página "Contas de Free Fire".');
+                    addFreeFireAccountForm.reset(); // Limpa o formulário
+                });
+            } else {
+                console.error("Erro: Formulário com ID 'addFreeFireAccountForm' não encontrado.");
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliações - Cuscuz Vendas</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Sobre a Nossa Loja</a>
+                </li>
+                <li>
+                    <a href="referencs.html">Referências</a>
+                </li>           
+                <li>
+                    <a href="feedback.html">feedback</a>
+                </li>
+            </ul>
+        </nav>
+        <header>
+            <div class="center">
+                <img src="./img/cuscuz.png" alt="Logo Cuscuz Vendas">
+            </div>
+            <h1>Deixe sua Avaliação!</h1>
+            <p>Sua opinião é muito importante para nós.</p>
+        </header>
+
+        <main>
+            <section class="feedback-section">
+                <h2>Envie seu Feedback!</h2>
+                <form action="#" method="POST"> <div class="form-group">
+                        <label for="name">Seu Nome:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Seu E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Avaliação Geral:</label>
+                        <div class="rating-group">
+                            <input type="radio" id="rating5" name="rating" value="5" required>
+                            <label for="rating5">5 - Excelente</label>
+                            <input type="radio" id="rating4" name="rating" value="4">
+                            <label for="rating4">4 - Muito Bom</label>
+                            <input type="radio" id="rating3" name="rating" value="3">
+                            <label for="rating3">3 - Bom</label>
+                            <input type="radio" id="rating2" name="rating" value="2">
+                            <label for="rating2">2 - Regular</label>
+                            <input type="radio" id="rating1" name="rating" value="1">
+                            <label for="rating1">1 - Ruim</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comments">Comentários:</label>
+                        <textarea id="comments" name="comments" rows="5"></textarea>
+                    </div>
+
+                    <button type="submit">Enviar Feedback</button>
+                </form>
+            </section>
+
+            <section class="existing-reviews">
+                <h3>Avaliações de Clientes</h3>
+                <p>Aqui você pode exibir o feedback que já recebeu.</p>
+                <div class="review-item">
+                    <h4>"Atendimento excelente!" - João S.</h4>
+                    <p>⭐️⭐️⭐️⭐️⭐️</p>
+                    <p>Comprei uma conta e o processo foi super rápido e seguro. Recomendo!</p>
+                </div>
+                <div class="review-item">
+                    <h4>"Produto de qualidade." - Maria P.</h4>
+                    <p>⭐️⭐️⭐️⭐️</p>
+                    <p>Fiquei satisfeita com a compra, tudo conforme o anunciado.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

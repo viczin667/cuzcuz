@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Produto - Cuscuz Vendas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>Catálogo Cuscuz Vendas</h3>
+            <button class="close-btn" id="closeBtn">&times;</button>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-toggle">
+                    <i class="fas fa-fire"></i> Contas de Free Fire
+                    <i class="fas fa-chevron-down submenu-arrow"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="#"><i class="fas fa-dollar-sign"></i> Contas a partir de R$50</a></li>
+                    <li><a href="#"><i class="fas fa-dollar-sign"></i> Contas a partir de R$100</a></li>
+                    <li><a href="#"><i class="fas fa-dollar-sign"></i> Contas a partir de R$200</a></li>
+                    <li><a href="#"><i class="fas fa-dollar-sign"></i> Contas Elite (R$300+)</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-toggle">
+                    <i class="fas fa-paint-brush"></i> Produtos de Design
+                    <i class="fas fa-chevron-down submenu-arrow"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="#"><i class="fas fa-palette"></i> Artes para Posts</a></li>
+                    <li><a href="#"><i class="fas fa-magic"></i> Edições de Vídeo</a></li>
+                </ul>
+            </li>
+            <li><a href="produtos.html"><i class="fas fa-shopping-cart"></i> Todos os Produtos</a></li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-toggle">
+                    <i class="fas fa-headset"></i> Suporte
+                    <i class="fas fa-chevron-down submenu-arrow"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="https://wa.me/5599984180477" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Contato</a></li>
+                    <li><a href="https://chat.whatsapp.com/JyXdm9xFfttEaGBsVBhuh6" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Grupo</a></li>
+                    <li><a href="https://instagram.com/cuzcuz_vendas" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://discord.gg/seuconvite" target="_blank"><i class="fab fa-discord"></i> Discord</a></li>
+                    <li><a href="mailto:seuemail@example.com"><i class="fas fa-envelope"></i> E-mail</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="site-content" id="siteContent">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Sobre a Nossa Loja</a></li>
+                    <li><a href="referencs.html">Referências</a></li>
+                    <li><a href="avaliacoes.html">Avaliações</a></li>
+                </ul>
+            </nav>
+            <header>
+                <div class="center">
+                    <img src="./img/cuscuz.png" alt="Logo Cuscuz Vendas">
+                </div>
+                <h1>Cuscuz Vendas</h1>
+                <h2>Adicionar Novo Produto</h2>
+            </header>
+            <main>
+                <section class="add-product-section">
+                    <h3>Cadastre um produto para venda!</h3>
+                    <form id="addProductForm">
+                        <div class="form-group">
+                            <label for="productName">Nome do Produto:</label>
+                            <input type="text" id="productName" name="productName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="productDescription">Descrição:</label>
+                            <textarea id="productDescription" name="productDescription" rows="4" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="productPrice">Preço (R$):</label>
+                            <input type="number" id="productPrice" name="productPrice" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="productImage">URL da Imagem:</label>
+                            <input type="url" id="productImage" name="productImage" placeholder="Ex: https://exemplo.com/imagem.png" required>
+                            <small>Cole o link direto da imagem aqui (hospede a imagem online antes).</small>
+                        </div>
+                        <button type="submit" class="submit-product-button">Adicionar Produto</button>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Lógica do menu lateral e submenus para esta página (replicada do script.js)
+            const menuToggle = document.getElementById('menuToggle');
+            const sidebar = document.getElementById('sidebar');
+            const closeBtn = document.getElementById('closeBtn');
+            const overlay = document.getElementById('overlay');
+
+            function openSidebar() {
+                if (sidebar) { sidebar.classList.add('active'); }
+                if (overlay) { overlay.classList.add('active'); }
+            }
+
+            function closeSidebar() {
+                if (sidebar) { sidebar.classList.remove('active'); }
+                if (overlay) { overlay.classList.remove('active'); }
+            }
+
+            if (menuToggle) { menuToggle.addEventListener('click', openSidebar); }
+            if (closeBtn) { closeBtn.addEventListener('click', closeSidebar); }
+            if (overlay) { overlay.addEventListener('click', closeSidebar); }
+
+            const submenuToggles = document.querySelectorAll('.sidebar-menu .has-submenu > .submenu-toggle');
+            submenuToggles.forEach(toggle => {
+                toggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const parentLi = this.parentElement;
+                    parentLi.classList.toggle('active');
+                });
+            });
+
+            // Lógica de adicionar produto
+            const addProductForm = document.getElementById('addProductForm');
+            if (addProductForm) {
+                addProductForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    const name = document.getElementById('productName').value;
+                    const description = document.getElementById('productDescription').value;
+                    const price = parseFloat(document.getElementById('productPrice').value).toFixed(2);
+                    const image = document.getElementById('productImage').value;
+
+                    if (!name || !description || isNaN(price) || !image) {
+                        alert('Por favor, preencha todos os campos corretamente.');
+                        return;
+                    }
+
+                    const newProduct = {
+                        id: Date.now(), // Um ID único baseado no timestamp
+                        name: name,
+                        description: description,
+                        price: `R$ ${price.replace('.', ',')}`, // Formata para BRL
+                        image: image
+                    };
+
+                    // Carrega os produtos existentes, adiciona o novo e salva
+                    let products = JSON.parse(localStorage.getItem('siteProducts')) || [];
+                    products.push(newProduct);
+                    localStorage.setItem('siteProducts', JSON.stringify(products));
+
+                    alert('Produto adicionado com sucesso! Agora você pode vê-lo na página "Todos os Produtos".');
+                    addProductForm.reset(); // Limpa o formulário
+                });
+            } else {
+                console.error("Erro: Formulário com ID 'addProductForm' não encontrado.");
+            }
+        });
+    </script>
+</body>
+</html>

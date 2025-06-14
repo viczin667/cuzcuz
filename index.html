@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuzcuz Vendas - Contas de FF, Produtos Digitais e Design</title>
+    <meta name="description" content="Sua loja completa de contas Free Fire com skins raras e produtos digitais de alta qualidade, como artes para posts e edições de vídeo. Segurança e satisfação garantidas!">
+    <meta name="keywords" content="conta free fire, contas ff, skins raras ff, produtos digitais, design gráfico, artes para posts, edição de vídeo, free fire, cuscuz vendas, vendas de contas">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="menu-toggle" id="open-menu-btn">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <aside class="sidebar side-menu" id="side-menu">
+        <div class="sidebar-header">
+            <h3>Catálogo Cuzcuz Vendas</h3>
+            <button class="close-btn" id="close-menu-btn">&times;</button>
+        </div>
+        <ul class="sidebar-menu menu-list">
+            <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+            <li class="has-submenu">
+                <a href="produtos.html?category=freefire" class="submenu-toggle">
+                    <i class="fas fa-fire"></i> Contas de Free Fire
+                    <i class="fas fa-chevron-down submenu-arrow"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="produtos.html?category=freefire&price=50"><i class="fas fa-dollar-sign"></i> Contas a partir de R$50</a></li>
+                    <li><a href="produtos.html?category=freefire&price=100"><i class="fas fa-dollar-sign"></i> Contas a partir de R$100</a></li>
+                    <li><a href="produtos.html?category=freefire&price=200"><i class="fas fa-dollar-sign"></i> Contas a partir de R$200</a></li>
+                    <li><a href="produtos.html?category=freefire&price=300"><i class="fas fa-dollar-sign"></i> Contas Elite (R$300+)</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="produtos.html?category=design" class="submenu-toggle">
+                    <i class="fas fa-paint-brush"></i> Produtos de Design
+                    <i class="fas fa-chevron-down submenu-arrow"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="produtos.html?category=design&type=posts"><i class="fas fa-palette"></i> Artes para Posts</a></li>
+                    <li><a href="produtos.html?category=design&type=videos"><i class="fas fa-magic"></i> Edições de Vídeo</a></li>
+                </ul>
+            </li>
+            <li><a href="produtos.html"><i class="fas fa-shopping-cart"></i> Todos os Produtos</a></li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-toggle">
+                    <i class="fas fa-headset"></i> Suporte
+                    <i class="fas fa-chevron-down submenu-arrow"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="https://wa.me/5599984180477?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Cuscuz%20Vendas." target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Contato</a></li>
+                    <li><a href="https://chat.whatsapp.com/JyXdm9xFfttEaGBsVBhuh6" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Grupo</a></li>
+                    <li><a href="https://instagram.com/cuzcuz_vendas" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="mailto:seuemail@example.com"><i class="fas fa-envelope"></i> E-mail</a></li>
+                </ul>
+            </li>
+            <li><a href="duvidas.html"><i class="fas fa-question-circle"></i> Dúvidas Frequentes</a></li>
+        </ul>
+    </aside>
+
+    <div id="menu-overlay" class="menu-overlay"></div>
+
+    <div class="site-content" id="siteContent">
+        <header>
+            <div class="center">
+                <img src="./img/cuscuz.png" alt="Logo Cuscuz Vendas">
+            </div>
+            <h1>Cuzcuz Vendas</h1>
+            <h2>Vendas de contas de Free fire e outros produtos digitais.</h2>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Sobre a Nossa Loja</a></li>
+                    <li><a href="#faq">Dúvidas</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon-container">
+                <i class="fas fa-shopping-cart cart-icon" id="cart-icon"></i>
+                <span class="cart-count" id="cart-count">0</span>
+            </div>
+        </header>
+
+        <div id="cartModal" class="cart-modal">
+            <div class="cart-modal-content">
+                <span class="close-cart-btn" id="close-cart-btn">&times;</span>
+                <h2>Seu Carrinho</h2>
+                <div id="cartItemsList" class="cart-items-list">
+                    <p class="no-cart-items-message">Seu carrinho está vazio.</p>
+                </div>
+                <div class="cart-summary">
+                    <p>Total: R$ <span id="cartTotal">0.00</span></p>
+                    <button class="btn-primary checkout-btn" id="checkout-btn">Finalizar Compra</button>
+                    <button class="btn-secondary clear-cart-btn" id="clear-cart-btn">Limpar Carrinho</button>
+                </div>
+            </div>
+        </div>
+
+        <main class="container">
+          <section id="about" class="about-section">
+    <h3>Sobre a Cuzcuz Vendas:
+         Inovação e Confiança no Digital</h3>
+    <p>Na Cuscuz Vendas, somos a sua porta de entrada para o que há de melhor no mundo digital. Nos dedicamos a oferecer uma experiência de compra segura e eficiente, construindo confiança com cada cliente.</p>
+
+    <h4>O que vendemos?</h4>
+    <p>De <strong>contas de Free Fire exclusivas</strong> com skins raras a uma vasta gama de <strong>produtos digitais de alta qualidade</strong>, como artes personalizadas para posts, banners e edições de vídeo profissionais. Nosso catálogo está em constante atualização para atender às suas necessidades.</p>
+
+    <h4>Como fazemos?</h4>
+    <p>Trabalhamos com processos otimizados e um atendimento dedicado. Para contas de Free Fire, garantimos a <strong>segurança na transferência</strong> e a autenticidade dos itens. Para design, transformamos suas ideias em visuais impressionantes com <strong>criatividade e agilidade</strong>, sempre com foco na sua satisfação.</p>
+
+    <h4>Quem somos?</h4>
+    <p>Somos uma equipe apaixonada pelo universo digital e pelo que ele pode proporcionar. Com <strong>mais de 2 anos de experiência</strong> no mercado, construímos nossa reputação na <strong>confiança, transparência e no atendimento excepcional</strong>, buscando sempre superar suas expectativas com inovação constante.</p>
+</section>
+            </section>
+
+            <section id="reputation" class="reputation-section">
+                <h3>Reputação</h3>
+                <p>
+                    Com **mais de 2 anos de experiência**, construímos nossa reputação na **confiança** e no **atendimento excepcional**. Nosso compromisso é sempre superar suas expectativas!
+                </p>
+            </section>
+
+            <section class="flash-deal-section">
+                <div class="container">
+                    <div id="flash-deal-content">
+                        <p class="no-deal-message">Nenhuma oferta relâmpago ativa no momento. Fique de olho para as próximas!</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="testimonials-section">
+                <h2>O Que Nossos Clientes Dizem</h2>
+                <div class="testimonials-grid" id="testimonials-grid">
+                    <p class="no-testimonials-message">Nenhum depoimento disponível ainda.</p>
+                </div>
+            </section>
+
+            <section class="feedback-section">
+                <h2>Envie seu Feedback e Avaliação!</h2>
+                <form id="feedbackForm">
+                    <div class="form-group">
+                        <label for="name">Seu Nome:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Seu E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Avaliação Geral:</label>
+                        <div class="rating-group">
+                            <input type="radio" id="rating5" name="rating" value="5" required>
+                            <label for="rating5">5 - Excelente</label>
+                            <input type="radio" id="rating4" name="rating" value="4">
+                            <label for="rating4">4 - Muito Bom</label>
+                            <input type="radio" id="rating3" name="rating" value="3">
+                            <label for="rating3">3 - Bom</label>
+                            <input type="radio" id="rating2" name="rating" value="2">
+                            <label for="rating2">2 - Regular</label>
+                            <input type="radio" id="rating1" name="rating" value="1">
+                            <label for="rating1">1 - Ruim</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comments">Comentários:</label>
+                        <textarea id="comments" name="comments" rows="5"></textarea>
+                    </div>
+
+                    <button type="submit">Enviar Feedback</button>
+                </form>
+            </section>
+
+            <section id="faq" class="faq-section">
+                <h2>Dúvidas Frequentes</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <h3 class="faq-question">Como faço para comprar uma conta de Free Fire? <i class="fas fa-chevron-down faq-arrow"></i></h3>
+                        <div class="faq-answer">
+                            <p>Para comprar uma conta, navegue até a seção "Contas de Free Fire" em nosso site. Escolha a conta desejada, adicione ao carrinho e siga as instruções para pagamento. Após a confirmação, você receberá os dados de acesso por e-mail ou WhatsApp.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">Quais métodos de pagamento vocês aceitam? <i class="fas fa-chevron-down faq-arrow"></i></h3>
+                        <div class="faq-answer">
+                            <p>Atualmente aceitamos pagamentos via Pix, cartão de crédito e boleto bancário (via Mercado Pago). Para outras opções, entre em contato via WhatsApp.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">Como funcionam os produtos de design digital? <i class="fas fa-chevron-down faq-arrow"></i></h3>
+                        <div class="faq-answer">
+                            <p>Nossos produtos de design incluem artes personalizadas para posts em redes sociais, edições de vídeo e muito mais. Após a compra, entraremos em contato para coletar suas especificações e entregar um trabalho que atenda às suas expectativas.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">É seguro comprar contas de FF aqui? <i class="fas fa-chevron-down faq-arrow"></i></h3>
+                        <div class="faq-answer">
+                            <p>Sim, sua segurança é nossa prioridade. Todas as contas são verificadas e garantimos um processo de transferência seguro. Com mais de 2 anos de experiência, construímos uma reputação de confiança e satisfação do cliente.</p>
+                        </div>
+                    </div>
+                    </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Cuzcuz Vendas. Todos os direitos reservados.</p>
+        </footer>
+
+        <button class="back-to-top-btn" id="backToTopBtn" aria-label="Voltar ao topo">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <div id="toast-container"></div>
+
+    <a href="https://wa.me/5599984180477?text=Olá!%20Visitei%20o%20site%20e%20gostaria%20de%20mais%20informações."
+        class="whatsapp-float"
+        target="_blank"
+        aria-label="Fale conosco pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/SEU_ID_DO_CHAT/default'; // <<< SUBSTITUA 'SEU_ID_DO_CHAT' PELO SEU ID REAL!
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+</body>
+</html>
